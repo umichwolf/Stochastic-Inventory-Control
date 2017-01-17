@@ -1,0 +1,26 @@
+The data is average of running the code 20 many times.
+Leading Time is: 5
+Discount Rate is: 1
+Initial Inventory is: 0
+This is a integer typed problem or not: 0
+The Algorithm is: 3
+The Distribution Type is: 3
+The Distribution Parameters are:         50         5
+Period
+         40         50         60         80        100        120        140        160        180        200        220        240        260        280        300        320        340        360        380        400
+
+Total Cost
+       7921       9616  1.136e+04  1.442e+04  1.783e+04  2.109e+04  2.434e+04  2.772e+04  3.083e+04  3.412e+04  3.734e+04  4.051e+04  4.399e+04  4.726e+04  5.054e+04  5.373e+04  5.714e+04  6.041e+04  6.374e+04  6.687e+04
+
+Total Holding Cost
+      233.6      286.2      342.3      537.3      652.2      776.6       1017       1032       1134       1175       1445       1601       1611       1836       1955       2202       2348       2312       2396       2635
+
+Total Backlogging Cost
+       1713       1827       1990       1937       2181       2318       2393       2659       2686       2880       2919       2964       3311       3414       3562       3586       3829       4026       4241       4214
+
+Total Demand
+       1997       2504       3011       3988       5001       6004       6979       8012       9008  1.003e+04    1.1e+04  1.199e+04  1.303e+04  1.401e+04  1.501e+04  1.598e+04  1.699e+04  1.802e+04  1.904e+04  2.001e+04
+
+Total Ordering
+       1991       2501       3011       3982       4998       6000       6976       8008       9003  1.002e+04  1.099e+04  1.198e+04  1.302e+04  1.401e+04  1.501e+04  1.598e+04  1.699e+04  1.802e+04  1.903e+04  2.001e+04
+
