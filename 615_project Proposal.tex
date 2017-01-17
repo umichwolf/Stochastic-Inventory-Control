@@ -1,0 +1,67 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{babel}
+\begin{document}
+\textbf{Title}: Approximation Algorithms for stochastic Inventory
+Control Models
+
+\textbf{Team}: Hao Yuan, Feng Wei, Blake Miller.
+
+\textbf{Project Description}:
+
+Our project consider an \emph{periodic-review stochastic inventory
+control problem}. At each period $t$ for $t=0,1\cdots,T$, we order
+$Q_{t}$ amount of product, and face and random $D_{t}$ amount of
+demand. Under this condition, we suffer an expected cost 
+\[
+c_{t}\left(q_{t}\right)+E\left[h_{t}\left(x_{t}+q_{t}-D_{t}\right)^{+}+p_{t}\left(x_{t}+q_{t}-D_{t}\right)^{-}\right]
+\]
+where $c_{t}\left(q_{t}\right)$ is production cost, $h_{t}\left(x_{t}+q_{t}-D_{t}\right)^{+}$
+is holding cost, and $p_{t}\left(x_{t}+q_{t}-D_{t}\right)^{-}$ is
+backlogging cost (i.e. cost caused by unsatisfied demand).
+
+Let $V_{t}\left(x_{t}\right)$ be the optimal expected cost over over
+periods $t=t,\cdots,T.$ We can solve our $V_{t}'s$ by solving a
+dynamic programming problem:
+\begin{eqnarray*}
+V_{t}\left(x_{t}\right) & = & \min_{q_{t}\geq0}c_{t}\left(q_{t}\right)+E\left[h_{t}\left(x_{t}+q_{t}-D_{t}\right)^{+}+p_{t}\left(x_{t}+q_{t}-D_{t}\right)^{-}\right]\\
+ &  & +E\left[V_{t+1}\left(x_{t}+q_{t}-D_{t}\right)\right]
+\end{eqnarray*}
+
+
+It can be showed analytically that the optimal policy is a \emph{base-stock
+policy, }i.e. at each period we have a target inventory position call
+it $y_{t}^{*},$ if $x_{t}\leq y_{t}^{*}$ we order $q_{t}=y_{t}^{*}-x_{t},$
+otherwise we order $0.$ How every how to find $y_{t}^{*}$ computationally
+is a challenging question. It can be shown that this problem is tractable
+given $D_{t}$'s are independent or Markov modulated, but for general
+random $D_{t}$'s, its complexity grows exponentially in the size
+of the time horizon $T.$
+
+In our project, we want to implement an approximation algorithm, which
+has tractable complexity and guarantees that our approximated cost
+is at most 2 times has large as optimal cost.
+
+\textbf{Challenge}:
+
+1. The algorithm deals with problem with randomness, and we feel it
+is challenging to simulate random data.
+
+2. Our algorithm including solving a sequence of convex optimization
+problems, and we are uncertain whether there exists handy package
+we can use, otherwise, implement this hand should be challenging as
+well.
+
+3. Since this is very practical model, after coding it, we would like
+to apply it on real data, and do graphical demonstration, but we are
+uncertain about where is find real data, and how to do this specifically.
+
+\textbf{Main Referance}:
+
+Levi, R., Pal, M., Roundy R. O., Shmoys, D. B.. 2007. Approximation
+Algorithms for Stochastic Inventory Control Models. \emph{Mathematics
+of Operations Research}.
+\end{document}
